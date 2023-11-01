@@ -1,0 +1,109 @@
+
+.navbarSection{
+    width:100%;
+  
+    border: solid #ededed 1px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #606369;
+    background-color:rgba(236, 239, 249);
+    
+
+}
+.navBar{
+    display: contents;
+}
+
+.iconNavbar{
+    font-size: 2rem;
+    cursor: pointer;
+    color: #5cd2ed;
+}
+.flex{
+    display: flex;
+}
+.grid{
+    display:grid;
+
+}
+.logoDiv{
+    font-weight: 800;
+}
+.navList{
+    display: flex;
+}
+.navLink{
+    color:#606369;
+    font-size: 20px;
+    font-weight: 200;
+    text-decoration: none;
+    font-family: 'Poppins' sans-serif;
+
+
+    &:hover{
+        color:#5cd2ed;
+    };
+}
+.navItem{
+    list-style: none;
+    padding: 0 0.8rem;
+}
+.btn{
+    padding: 0.6rem 1.5rem;
+    background-color: linear-gradient(to right blue,green);
+}
+.homeIcon, .packagesIcon, .contactIcon, .userIcon{
+    color: #5cd2ed;
+    padding: 1px;
+}
+/* Media Queries */
+@media screen and (max-width: 768px)
+{
+    
+    .navbarMobile{
+    height: 100%;
+    right: 0;
+    position: fixed;
+    z-index: 2;
+    color: #606369;
+    background-color:rgba(236, 239, 249);
+    }
+    .navBar{
+        display: none;
+    }
+    .navListMobile{
+        display: flex;
+        flex-direction: column;
+        padding: 5%;
+        list-style: none;
+    }
+    
+}
+@media screen and (max-width: 960px){
+ 
+    .header{
+        padding: 0.5rem 2rem;
+    }
+    .navBar{
+        padding: 1rem;
+    }
+    
+}
+
+@media screen and (max-width: 1240px){
+    .navItem{
+        padding: 0 0.7rem;
+        list-style: none;
+    }
+    
+}
+@media screen and (max-width: 1560px){
+    .navItem{
+        padding: 1 0.5rem;
+        list-style: none;
+    }
+   
+}

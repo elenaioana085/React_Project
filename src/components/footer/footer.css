@@ -1,0 +1,53 @@
+.footerPage{
+    color: #606369;
+    background-color: rgba(236, 239, 249);
+  
+}
+.footerContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;   
+}
+.aboutAgency{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    
+}
+.descriptionAgency{
+    color: #606369;
+    padding: 2rem;
+}
+.socialMediaAccountsList{
+    display: flex;
+    flex-direction: row;
+}
+.LinkGroup{
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.groupListItem, .socialMediaIcon {
+    list-style: none;
+}
+.socialMediaIcon{
+    padding: 1rem;
+}
+.descriptionAgency p{
+    color: #606369;
+    font-weight: 200;
+}
+@media screen and (max-width: 946px){
+    .footerContainer{
+        display: flex;
+        flex-direction: column;
+    }
+    .aboutAgency{
+        width: 100%;
+    }
+    .socialMediaAccountsContainer{
+    display: flex;
+    justify-content: center;
+    }
+}
