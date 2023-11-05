@@ -1,15 +1,16 @@
 import { useState } from "react";
 import React from 'react';
 import './packages.css';
-import { Carousel } from "bootstrap";
 import CarouselPackages from "../../../functionalities/carouselPackages/carouselPackages";
 import Destinations from "./Destinations/Destinations";
 import Reviews from "./Reviews/reviews";
 import CardReviews from "./Reviews/cardsReviews/cardsReviewsONE";
 
-function Packages () {
+function Packages ({searchDetails}) {
+
     return (
         <section className="sectionPackages">
+            {JSON.stringify(searchDetails)}
             <div className="containerPackagesPageMain">
                 <CarouselPackages></CarouselPackages>
                 <Destinations></Destinations>

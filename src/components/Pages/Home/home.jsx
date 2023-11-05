@@ -4,14 +4,19 @@ import './home.css';
 import video from './videos/home.mp4';
 import{BsFillGeoAltFill} from 'react-icons/bs';
 
-function Home ()
+function Home ({onChangeSearch})
 {
+    
+    const handleUpdateForm = (ev) => {
+    onChangeSearch({[ev.target.name]: ev.target.value})
+    }
     return (
         <section className="home">
             <div className="homePageVideo">
                 <div className="overlay">
                     <div className="videoVideo">
                         <video src={video} muted autoPlay loop type="video/mp4" id="homeVideo"></video> 
+                        <div className="videoOverlay" ></div>
                     </div>
                 </div>
                 <div className="homePageText">
@@ -23,7 +28,7 @@ function Home ()
                     <div className="destinationInput">
                         <label htmlFor="city">Search your destination:</label>
                         <div className="input flex">
-                            <input type="text" placeholder="City"/>
+                            <input name="destination" type="text" placeholder="City" onChange={handleUpdateForm} />
                             <BsFillGeoAltFill className="homePageFilterIcon" />
                         </div>
                     </div>

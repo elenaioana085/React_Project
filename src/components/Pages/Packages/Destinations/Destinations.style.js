@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { BACKGROUND_COLOR_BODY_BRIGHT, BACKGROUND_COLOR_BODY_DARK, FONT_TEXT_COLOR_DARK } from '../../../../functionalities/color';
-import { Alert, Card, Button, Spinner } from "react-bootstrap";
+import { BACKGROUND_COLOR_BODY_BRIGHT, BACKGROUND_COLOR_BODY_DARK, FONT_TEXT_COLOR_BRIGHT, FONT_TEXT_COLOR_DARK } from '../../../../functionalities/color';
+import { Alert, Card, Button, Spinner, ListGroupItem } from "react-bootstrap";
 
 
 export const ContainerDestinations = styled.div`
@@ -54,6 +54,8 @@ export const SearchBarByDestinationsText = styled.div`
 
 export const SearchBarByDestinationFunctionStyle = styled.div`
     padding: 1%;
+    width: 40vw;
+    height: auto;
    
 `;
 
@@ -76,5 +78,21 @@ export const CardContainerStyle = styled.div`
     
 `;
 export const CardCustom = styled(Card)`
-  background:red;
+  background:${BACKGROUND_COLOR_BODY_DARK};
+  
+  
+`;
+
+export const ListGroupItemCustom = styled(ListGroupItem)`
+     background: rgb(227 233 255);
+     font-family: 'Montserrat', sans-serif;
+     font-weight: 300;
+
+
+`;
+
+export const CardTitleCustom = styled(Card.Title)`
+    font-weight: 500;
+    color: ${FONT_TEXT_COLOR_BRIGHT};
+    font-family: 'Montserrat', sans-serif;
 `;

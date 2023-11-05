@@ -1,10 +1,11 @@
 import { useState } from "react";
 import React from 'react';
 import Accordion from 'react-bootstrap/Accordion';
+import { AccordionCustom } from "./FAQAccomodation.style";
 
-function FAQTransport() {
+function FAQAccomodation() {
     return (
-      <Accordion defaultActiveKey="0">
+      <AccordionCustom defaultActiveKey="0">
         <Accordion.Item eventKey="0">
           <Accordion.Header>What happens if my flight is cancelled or delayed?</Accordion.Header>
           <Accordion.Body>
@@ -17,8 +18,8 @@ function FAQTransport() {
           If you fall ill suddenly before your flight, please cancel your reservation through the Manage booking page. If the ticket type you purchased is refundable, you can claim a refund by filling in the refund form. In other cases, please contact your insurance company for a reimbursement.Most people with existing medical conditions are able to fly without difficulty. However, sometimes certain precautions need to be taken and in some cases we might request a medical clearance. Read more about flying with medical conditions  
           </Accordion.Body>
         </Accordion.Item>
-      </Accordion>
+      </AccordionCustom>
     );
   };
   
-  export default FAQTransport;
+  export default FAQAccomodation;

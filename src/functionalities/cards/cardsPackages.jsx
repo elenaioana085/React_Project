@@ -6,7 +6,6 @@ import "./cardsPackages.css";
 
 
 function CardsPackages ({city,price}) {
-    console.log(city)
     return (
             <Card style={{ width: '18rem' }}>
               <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />

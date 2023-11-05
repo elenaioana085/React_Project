@@ -50,12 +50,12 @@ function CarouselPackages() {
 
   return (
    
-    <Carousel>
+    <Carousel pause={true} interval={null}>
       {sliderImages.map((item) => (
         <Carousel.Item key={item.label}>
-          
+         
           <img src={item.src} alt={item.label} width={1440} height={600} />
-          <CarouselOverlay></CarouselOverlay>
+          <CarouselOverlay className="carusel"></CarouselOverlay>
 
           <Carousel.Caption>
             <h1>{item.title}</h1>

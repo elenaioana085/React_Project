@@ -1,14 +1,17 @@
 import { useState } from "react";
 import React from 'react';
-import { ContainerContactForm } from "./ContactForm.style";
+import { ContactFormText, ContainerContactForm } from "./ContactForm.style";
 import FormFirst from "./Form/FormFirst";
-import ButtonForm from "./FormButton/FormButton";
+
 
 function ContactForm () {
     return(
         <ContainerContactForm>
+            <ContactFormText>Did not find the answer you were looking for?
+                Please fiil in the form bellow
+            </ContactFormText>
             <FormFirst></FormFirst>
-            <ButtonForm></ButtonForm>
+            
         </ContainerContactForm>
     );
 }

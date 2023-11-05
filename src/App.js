@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './app.css';
-import Home from './components/Pages/Home/home';
 import { Route, Routes } from 'react-router-dom';
+import Home from './components/Pages/Home/home';
 import Packages from './components/Pages/Packages/packages';
 import Contact from './components/Pages/Contact/contact';
 import User from './components/Pages/User/user';
@@ -10,17 +10,21 @@ import Footer from './components/footer/footer';
 
 
 function App() {
+  const [searchDetails, setSearchDetails] = useState()
   
+  const handleChangeSearchDetails = (fieldChange) => {
+    setSearchDetails(fieldChange)
+  }
   
   return (
     <>
     <Navbar></Navbar>
     <Routes>
           
-          <Route path="/packages" element={<Packages/>} />
+          <Route path="/packages" element={<Packages searchDetails={searchDetails} />} />
           <Route path="/contact" element={<Contact/>} />
           <Route path="/user" element={<User/>} />
-          <Route path="/" element={<Home/>} />
+          <Route path="/" element={<Home onChangeSearch={handleChangeSearchDetails}/>} />
       </Routes>
       <Footer></Footer>
     </>
