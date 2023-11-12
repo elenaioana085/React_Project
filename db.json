@@ -180,28 +180,6 @@
     ],
     "profile": {
         "name": "r35007"
-    },
-    "users": [
-        {
-            "id":1,
-            "FirstName": "x",
-            "LastName": "y",
-            "password": "parola",
-            "favouriteDestinations": [
-                {
-                    "id": "",
-                    "city": "",
-                    "country": "",
-                    "chekindate": "",
-                    "chekoutdate": "",
-                    "price": "",
-                    "landmark": "",
-                    "transportation": "",
-                    "length":"",
-                    "accomodation": " ",
-                    "picture":""
-                }
-            ]
-        }
-    ]
+    }
+   
 }

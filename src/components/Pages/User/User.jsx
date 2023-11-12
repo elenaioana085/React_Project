@@ -25,11 +25,13 @@ function User() {
           <span className="visually-hidden">Loading...</span>
         </Spinner>
       )}
-      {destinations && destinations.length > 0 && (
+      {destinations && destinations.length > 0 ? (
         <Favorites
           destinations={destinations}
           onFavoriteDestination={handleFavouriteChange}
         ></Favorites>
+      ):(
+        <div> You have not selected any favourite packages</div>
       )}
     </>
   );

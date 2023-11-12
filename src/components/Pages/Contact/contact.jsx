@@ -2,8 +2,8 @@ import { useState } from "react";
 import React from 'react';
 
 import { ContainerContact, ContainerContactDescription, ContainerImageContactDescrition } from "./contact.style.js";
-import FAQ from "./FAQ/FAQ.js";
-import ContactForm from "./ContactForm/ContactForm.js";
+import FAQ from "./FAQ/FAQ.jsx";
+import ContactForm from "./ContactForm/ContactForm.jsx";
 
 
 function Contact () {

@@ -8,18 +8,12 @@ import {
   CardTitleCustom,
   CardsPackagesStyle,
   ListGroupItemCustom,
-  SearchBarByDestinationFunctionStyle,
 } from "./Destinations.style";
 import { useEffect } from "react";
-import { handleFavor } from "../../../../hooks/handleFavor";
-import useFetchPackagesByUser from "../../../../hooks/handleFavouriteDestinationsTEST";
 
 const CardsDestinations = ({
-  searchDetails,
   filtered,
-  setDestinationFiltered,
-  destination,
-  onFavoritedDestination,
+  setDestinationFiltered
 }) => {
   const { destinations, loading, error, setError } = useFetchPackages();
 

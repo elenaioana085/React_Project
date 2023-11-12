@@ -1,14 +1,16 @@
 import { useState } from "react";
-import React from 'react';
-import Form from 'react-bootstrap/Form';
+import React from "react";
+import Form from "react-bootstrap/Form";
 import DropdownForm from "../DropdownForm/DropdownFom";
-import { FormControlCustom, FormCustom, FormLabelCustom } from "./FormFirst.style";
-import ButtonForm from "../FormButton/FormButton";
+import {
+  FormControlCustom,
+  FormCustom,
+  FormLabelCustom,
+} from "./FormFirst.style";
+import Button from 'react-bootstrap/Button';
 
-
-function FormFirst(){
-    return (
-
+function FormFirst() {
+  return (
     <FormCustom>
       <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
         <FormLabelCustom>Email address</FormLabelCustom>
@@ -18,16 +20,20 @@ function FormFirst(){
         <DropdownForm></DropdownForm>
       </Form.Group>
       <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-        <FormLabelCustom>Please write in the box bellow your message</FormLabelCustom>
+        <FormLabelCustom>
+          Please write in the box bellow your message
+        </FormLabelCustom>
         <FormControlCustom as="textarea" rows={3} />
       </Form.Group>
       <Form.Group className="mb-3">
-         <ButtonForm></ButtonForm>
+          <div className="d-grid gap-2">
+            <Button variant="primary" size="lg">
+              Submit
+            </Button>
+          </div>
       </Form.Group>
-      
     </FormCustom>
-
-    );
+  );
 }
 
 export default FormFirst;

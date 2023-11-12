@@ -16,8 +16,7 @@ function Navbar() {
   const showNav = () => {
     setActive(!active);
   };
-  
-  
+
   return (
     <section className="navbarSection">
       <header className="header">
@@ -56,8 +55,6 @@ function Navbar() {
               </Link>
             </li>
           </ul>
-          
-          
         </div>
 
         <div onClick={showNav} className="toggleNavbar">
@@ -65,37 +62,37 @@ function Navbar() {
         </div>
       </header>
       <div className="navbarMobile">
-            {active ? (
-              <ul className="navListMobile">
-                <li className="navItemMobile">
-                  <Link to="/" className="navLink">
-                    <BsFillHouseFill className="homeIcon" />
-                    Home
-                  </Link>
-                </li>
-                <li className="navItemMobile">
-                  <Link to="/packages" className="navLink">
-                    <BsFillAirplaneFill className="packagesIcon" />
-                    Packages
-                  </Link>
-                </li>
-                <li className="navItemMobile">
-                  <Link to="/contact" className="navLink">
-                    <BsChatLeftDotsFill className="contactIcon" />
-                    Contact
-                  </Link>
-                </li>
-                <li className="navItemMobile">
-                  <Link to="/user" className="navLink">
-                    <BsCartFill className="userIcon" />
-                    User
-                  </Link>
-                </li>
-              </ul>
-            ) : (
-              ""
-            )}
-          </div>
+        {active ? (
+          <ul className="navListMobile">
+            <li className="navItemMobile">
+              <Link to="/" className="navLink">
+                <BsFillHouseFill className="homeIcon" />
+                Home
+              </Link>
+            </li>
+            <li className="navItemMobile">
+              <Link to="/packages" className="navLink">
+                <BsFillAirplaneFill className="packagesIcon" />
+                Packages
+              </Link>
+            </li>
+            <li className="navItemMobile">
+              <Link to="/contact" className="navLink">
+                <BsChatLeftDotsFill className="contactIcon" />
+                Contact
+              </Link>
+            </li>
+            <li className="navItemMobile">
+              <Link to="/user" className="navLink">
+                <BsCartFill className="userIcon" />
+                User
+              </Link>
+            </li>
+          </ul>
+        ) : (
+          ""
+        )}
+      </div>
     </section>
   );
 }
