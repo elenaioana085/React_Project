@@ -14,7 +14,7 @@ export const DescriptionDestinations = styled.div`
     
     display: flex;
     justify-content: space-between;
-
+    flex-direction: column;
     padding: 7%;
     background-color: ${BACKGROUND_COLOR_BODY_DARK};
      p {
@@ -38,18 +38,34 @@ export const DescriptionDestinationsItemText = styled.div`
      padding: 10px;
 `;
 
-export const SearchBarByDestinationsContainer = styled.div`
-    background-color: ${BACKGROUND_COLOR_BODY_BRIGHT};
-    color: ${FONT_TEXT_COLOR_DARK};
+export const ContainerButtonCategoryDetails = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 1%;
+    padding-left: 5%;
+`;
+
+export const ContainerDescriptionDestinationsItem = styled.div`
+    display: flex;
+    flex-direction: row;
+`;
+
+
+export const SearchBarByDestinationsContainer = styled.div`
+    background-color: ${BACKGROUND_COLOR_BODY_DARK};
+    color: ${FONT_TEXT_COLOR_BRIGHT};
+    display: flex;
+    flex-direction: row;
+    
 
 `;
 
 export const SearchBarByDestinationsText = styled.div`
     padding: 3%;
     margin-left: 4rem;
+    
+
 `;
 
 export const SearchBarByDestinationFunctionStyle = styled.div`
@@ -87,6 +103,7 @@ export const ListGroupItemCustom = styled(ListGroupItem)`
      background: rgb(227 233 255);
      font-family: 'Montserrat', sans-serif;
      font-weight: 300;
+     font-size: 15px;
 
 
 `;

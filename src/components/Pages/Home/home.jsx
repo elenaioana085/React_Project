@@ -1,71 +1,35 @@
-import { useState } from "react";
-import React from 'react'
-import './home.css';
-import video from './videos/home.mp4';
-import{BsFillGeoAltFill} from 'react-icons/bs';
+import React from "react";
+import './Home.css';
 
-function Home ({onChangeSearch})
-{
-    
-    const handleUpdateForm = (ev) => {
-    onChangeSearch({[ev.target.name]: ev.target.value})
-    }
-    return (
-        <section className="home">
+import ButtonHomePage from "./ButtonHomePage/ButtonHomePage";
+
+
+function Home(){
+    return(
+        <div className="ContainerHomeTest">
+       <section className="home">
             <div className="homePageVideo">
                 <div className="overlay">
                     <div className="videoVideo">
-                        <video src={video} muted autoPlay loop type="video/mp4" id="homeVideo"></video> 
+                        <video src={"https://player.vimeo.com/external/406568164.sd.mp4?s=d34348b81ceba47b6d1a03e0d07256de1d166c43&profile_id=164&oauth2_token_id=57447761"} muted autoPlay loop type="video/mp4" id="homeVideo"></video> 
                         <div className="videoOverlay" ></div>
                     </div>
                 </div>
                 <div className="homePageText">
                 <div className="homePageDescription">
-                    <h2>Find your next vacation</h2>
-                    <p>Discover our holiday packages</p>
+                    <h2>Adventure awaits. Book your escape</h2>
+                    <p>Discover the world's wonders with our exclusive travel packages. From pristine beaches to historic cities, your adventure begins here!</p>
+                     <ButtonHomePage style={{weight:"900"}}></ButtonHomePage>
+                    
+                    
                 </div>
-                <div className="cardDiv">
-                    <div className="destinationInput">
-                        <label htmlFor="city">Search your destination:</label>
-                        <div className="input flex">
-                            <input name="destination" type="text" placeholder="City" onChange={handleUpdateForm} />
-                            <BsFillGeoAltFill className="homePageFilterIcon" />
-                        </div>
-                    </div>
-
-                    <div className="dateInput">
-                        <label htmlFor="date">Select your check-in date:</label>
-                        <div className="input flex">
-                            <input type="date"/>
-                        </div>
-                    </div>
-
-                    <div className="dateInput">
-                        <label htmlFor="date">Select your check-out date:</label>
-                        <div className="input flex">
-                            <input type="date"/>
-                        </div>
-                    </div>
-
-                    <div className="priceInput">
-                       <div className="label_total flex">
-                        <label htmlFor="price">Maximum price:</label>
-                        <h3 className="total">$1000</h3>
-                       </div>
-
-                       <div className="input flex">
-                        <input type="range" max="1000" min="250"/>
-                       </div>
-                    </div>
-
-                    <div ></div>
-
-                </div>
+                
             </div>
             </div>
             
             
         </section>
+        </div>
     );
 }
 export default Home;

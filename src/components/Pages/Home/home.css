@@ -38,10 +38,14 @@
 .homePageDescription {
     font-weight: 800;
     color: white;
+    width:30vw;
 }
 .homePageDescription h2 {
     font-weight: 700;
     color: white;
+}
+ .button{
+    font-weight: 900px;
 }
 .cardDiv{
     padding: 2rem 1rem;

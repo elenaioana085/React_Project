@@ -1,0 +1,207 @@
+{
+    "destinations": [
+        {
+            "id": 1,
+            "city": "Viena",
+            "country": "Austria",
+            "chekindate": "22/12/2023",
+            "chekoutdate": "27/12/2023",
+            "price": "550",
+            "landmark": "Opera House",
+            "transportation": "train",
+            "length":"6",
+            "accomodation": "NH Wien Belvedere",
+            "picture":"https://images.pexels.com/photos/16912374/pexels-photo-16912374/free-photo-of-fountain-in-gloriette-schonbrunn.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "favourite":false
+
+        },
+        {
+            "id": 2,
+            "city": "Poros",
+            "country": "Greece",
+            "chekindate": "05/08/2024",
+            "chekoutdate": "08/08/2024",
+            "price": "330",
+            "landmark": "Temple of Posoidon",
+            "transportation": "plane",
+            "length":"4",
+            "accomodation": "Dionysos Hotel",
+            "picture":"https://images.pexels.com/photos/1285625/pexels-photo-1285625.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "favourite":false
+        },
+        {
+            "id": 3,
+            "city": "Cairo",
+            "country": "Egypt",
+            "chekindate": "05/09/2024",
+            "chekoutdate": "07/09/2024",
+            "price": "279",
+            "landmark": "Pyramids of Gyza",
+            "transportation": "plane",
+            "length":"3",
+            "accomodation": "Sonesta Hotel Tower",
+            "picture":"https://images.pexels.com/photos/3873681/pexels-photo-3873681.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "favourite":false
+        },
+        {
+            "id": 4,
+            "city": "Barcelona",
+            "country": "Spain",
+            "chekindate": "27/04/2024",
+            "chekoutdate": "30/04/2024",
+            "price": "420",
+            "landmark": "Sagrada Familia",
+            "transportation": "plane",
+            "length":"4",
+            "accomodation": "Catalonia Sagrada Familia",
+            "picture":"https://images.pexels.com/photos/11816123/pexels-photo-11816123.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "favourite":false
+        },
+        {
+            "id": 5,
+            "city": "London",
+            "country": "UK",
+            "chekindate": "04/11/2024",
+            "chekoutdate": "08/11/2024",
+            "price": "389",
+            "landmark": "Big Ben",
+            "transportation": "plane",
+            "length":"5",
+            "accomodation": "The Z Hotel Holborn",
+            "picture":"https://images.pexels.com/photos/726484/pexels-photo-726484.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "favourite":false
+        },
+        {
+            "id": 6,
+            "city": "Monterrey",
+            "country": "Mexico",
+            "chekindate": "14/10/2024",
+            "chekoutdate": "17/10/2024",
+            "price": "456",
+            "landmark": "Macroplaza",
+            "transportation": "plane",
+            "length":"4",
+            "accomodation": "NH Monterrey La Fe",
+            "picture":"https://images.pexels.com/photos/12315479/pexels-photo-12315479.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "favourite":false
+        },
+        {
+            "id": 7,
+            "city": "Bogota",
+            "country": "Columbia",
+            "chekindate": "15/05/2024",
+            "chekoutdate": "18/05/2024",
+            "price": "504",
+            "landmark": "Monserrate",
+            "transportation": "plane",
+            "length":"4",
+            "accomodation": "ibis Bogota Museo",
+            "picture":"https://images.pexels.com/photos/13722651/pexels-photo-13722651.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "favourite":false
+        },
+        {
+            "id": 8,
+            "city": "Paris",
+            "country": "France",
+            "chekindate": "08/10/2024",
+            "chekoutdate": "12/10/2024",
+            "price": "438",
+            "landmark": "Eiffel Tower",
+            "transportation": "train",
+            "length":"5",
+            "accomodation": "B&B HOTEL Paris 17 Batignolles",
+            "picture":"https://images.pexels.com/photos/699466/pexels-photo-699466.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "favourite":false
+            
+        },
+        {
+            "id": 9,
+            "city": "Dubai",
+            "country": "United Arab Emirates",
+            "chekindate": "09/10/2024",
+            "chekoutdate": "13/10/2024",
+            "price": "544",
+            "landmark": "Burj Khalifa",
+            "transportation": "plane",
+            "length":"5",
+            "accomodation": "Citymax Hotel Bur Dubai",
+            "picture":"https://images.pexels.com/photos/6536035/pexels-photo-6536035.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "favourite":false
+        },
+        {
+            "id": 10,
+            "city": "Baros",
+            "country": "Maldive",
+            "chekindate": "09/07/2024",
+            "chekoutdate": "13/07/2024",
+            "price": "679",
+            "landmark": "underwater corals",
+            "transportation": "plane",
+            "length":"5",
+            "accomodation": "Samann Grand",
+            "picture":"https://images.pexels.com/photos/1287452/pexels-photo-1287452.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "favourite":false
+        },
+        {
+            "id": 11,
+            "city": "Interlaken",
+            "country": "Switzerland",
+            "chekindate": "11/12/2023",
+            "chekoutdate": "15/12/2023",
+            "price": "459",
+            "landmark": "Swiss Alps",
+            "transportation": "plane",
+            "length":"5",
+            "accomodation": "Hotel Chalet",
+            "picture":"https://images.pexels.com/photos/4159867/pexels-photo-4159867.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "favourite":false
+        },
+        {
+            "id": 12,
+            "city": "Ubud",
+            "country": "Indonesia",
+            "chekindate": "12/08/2024",
+            "chekoutdate": "16/08/2024",
+            "price": "655",
+            "landmark": "Pura Taman",
+            "transportation": "plane",
+            "length":"5",
+            "accomodation": "Adiwana ",
+            "picture":"https://images.pexels.com/photos/1802183/pexels-photo-1802183.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "favourite":false
+        }
+    ],
+    "comments": [
+        {
+            "id": 1,
+            "body": "some comment",
+            "postId": 1
+        }
+    ],
+    "profile": {
+        "name": "r35007"
+    },
+    "users": [
+        {
+            "id":1,
+            "FirstName": "x",
+            "LastName": "y",
+            "password": "parola",
+            "favouriteDestinations": [
+                {
+                    "id": "",
+                    "city": "",
+                    "country": "",
+                    "chekindate": "",
+                    "chekoutdate": "",
+                    "price": "",
+                    "landmark": "",
+                    "transportation": "",
+                    "length":"",
+                    "accomodation": " ",
+                    "picture":""
+                }
+            ]
+        }
+    ]
+}
