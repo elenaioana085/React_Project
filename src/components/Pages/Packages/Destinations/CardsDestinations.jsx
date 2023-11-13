@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Alert, Card, Button, Spinner } from "react-bootstrap";
+import { Alert, Card, Button, Spinner, Toast } from "react-bootstrap";
 import ListGroup from "react-bootstrap/ListGroup";
 import useFetchPackages from "../../../../hooks/useFetchDestinations";
 import {
@@ -35,6 +35,9 @@ const CardsDestinations = ({
   useEffect(() => {
     setDestinationFiltered(destinations);
   }, [destinations]);
+
+  const [showA, setShow] = useState(true)
+  const toggleShowA = () => setShow(!showA)
 
   return (
     <>
@@ -92,17 +95,20 @@ const CardsDestinations = ({
                   </ListGroupItemCustom>
                   <ListGroupItemCustom>
                     <button
-                      onClick={() =>
+                      onClick={() =>[
                         handleFavouriteChange(
                           destination.id,
                           destination.favourite
-                        )
+                        ), toggleShowA()]
                       }
+                      
                     >
                       {!destination.favourite
                         ? "Add to favourites"
                         : "Remove from favourites"}
+                      
                     </button>
+                   
                   </ListGroupItemCustom>
                 </ListGroup>
                 <Card.Body></Card.Body>
@@ -110,6 +116,18 @@ const CardsDestinations = ({
             </CardContainerStyle>
           ))}
       </CardsPackagesStyle>
+      <Toast style={{position:"fixed",top:"10px",right:"100px"}} show={showA} onClose={toggleShowA} autohide delay={3000}>
+               <Toast.Header>
+                 <img
+                   src="holder.js/20x20?text=%20"
+                   className="rounded me-2"
+                   alt=""
+                 />
+                 <strong className="me-auto">Bootstrap</strong>
+                 <small>11 mins ago</small>
+               </Toast.Header>
+               <Toast.Body>Hello! Your chosen package has been added to favourites.</Toast.Body>
+             </Toast>
     </>
   );
 };

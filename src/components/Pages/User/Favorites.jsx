@@ -1,5 +1,6 @@
+import { useState } from "react";
 import React from "react";
-import { Card, ListGroup } from "react-bootstrap";
+import { Card, ListGroup, Toast } from "react-bootstrap";
 import {
   CardContainerStyle,
   CardCustom,
@@ -9,6 +10,8 @@ import {
 } from "../Packages/Destinations/Destinations.style";
 
 function Favorites({ destinations, onFavoriteDestination }) {
+  const [showA, setShow] = useState(true)
+  const toggleShowA = () => setShow(!showA)
   const favoriteDestinationCard = destinations.map((destination, index) => (
     <CardContainerStyle key={`destination-${index}`}>
       <CardCustom>
@@ -46,9 +49,11 @@ function Favorites({ destinations, onFavoriteDestination }) {
           <ListGroupItemCustom>
             {!destination.favourite ? (
               <button
-                onClick={() =>
-                  onFavoriteDestination(destination.id, destination.favourite)
+                onClick={() =>[
+                  onFavoriteDestination(destination.id, destination.favourite),
+                  toggleShowA()]
                 }
+               
               >
                 Add to favourites
               </button>
@@ -60,12 +65,16 @@ function Favorites({ destinations, onFavoriteDestination }) {
               >
                 Remove from favourites
               </button>
+          
             )}
+             
           </ListGroupItemCustom>
         </ListGroup>
         <Card.Body></Card.Body>
       </CardCustom>
     </CardContainerStyle>
+
+
   ));
   return (
     <div>
@@ -74,8 +83,21 @@ function Favorites({ destinations, onFavoriteDestination }) {
       </div>
       <div>
         <CardsPackagesStyle>{favoriteDestinationCard}</CardsPackagesStyle>
+        <Toast style={{position:"fixed",top:"10px",right:"100px"}} show={showA} onClose={toggleShowA} autohide delay={3000}>
+               <Toast.Header>
+                 <img
+                   src="holder.js/20x20?text=%20"
+                   className="rounded me-2"
+                   alt=""
+                 />
+                 <strong className="me-auto">Bootstrap</strong>
+                 <small>11 mins ago</small>
+               </Toast.Header>
+               <Toast.Body>Hello! Your package has been removed from favourites.</Toast.Body>
+             </Toast>
       </div>
     </div>
+
   );
 }
 
