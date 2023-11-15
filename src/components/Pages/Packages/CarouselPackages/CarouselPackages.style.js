@@ -12,7 +12,7 @@ export const CarouselOverlay = styled.div`
    
     padding-top: 0;
     padding-bottom: 1.25rem;
-    margin-top: 18%;
+    margin-top: 32%;
     left: 20%;
 `;
 
