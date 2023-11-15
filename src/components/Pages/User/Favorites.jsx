@@ -9,23 +9,29 @@ import {
   CardTitleCustom,
   ListGroupItemCustom,
 } from "../Packages/Destinations/Destinations.style";
-import { CardContainerStyleUserPage, CardsPackagesContainer, CardsPackagesStyleUserPage, ContainerPageText, ContainerUserPage, PageDescription, PageDescriptionParagraph, PageTitle } from "./User.style";
+import {
+  CardContainerStyleUserPage,
+  CardsPackagesContainer,
+  CardsPackagesStyleUserPage,
+  ContainerPageText,
+  ContainerUserPage,
+  PageDescription,
+  PageDescriptionParagraph,
+  PageTitle,
+} from "./User.style";
 
 function Favorites({ destinations, onFavoriteDestination }) {
-
   function changeBackground(e) {
-    e.target.style.background = 'blue';
-    e.target.style.color = 'white';
+    e.target.style.background = "blue";
+    e.target.style.color = "white";
   }
-    function returnBackgroundToNormal(e){
-      e.target.style.background = null;
-      e.target.style.color = 'black';
-  
-    };
+  function returnBackgroundToNormal(e) {
+    e.target.style.background = null;
+    e.target.style.color = "black";
+  }
 
-
-  const [showA, setShow] = useState(true)
-  const toggleShowA = () => setShow(!showA)
+  const [showA, setShow] = useState(false);
+  const toggleShowA = () => setShow(!showA);
   const favoriteDestinationCard = destinations.map((destination, index) => (
     <CardContainerStyleUserPage key={`destination-${index}`}>
       <CardCustom>
@@ -62,61 +68,73 @@ function Favorites({ destinations, onFavoriteDestination }) {
           </ListGroupItemCustom>
           <ListGroupItemCustom>
             {!destination.favourite ? (
-              <Button variant="outline-dark"  onMouseOver={changeBackground} onMouseOut={returnBackgroundToNormal} style={{fontWeight:900}}
-                onClick={() =>[
-                  onFavoriteDestination(destination.id, destination.favourite),
-                  toggleShowA()]
-                }
-               
+              <Button
+                variant="outline-dark"
+                onMouseOver={changeBackground}
+                onMouseOut={returnBackgroundToNormal}
+                style={{ fontWeight: 900 }}
+                onClick={() => {
+                  onFavoriteDestination(destination.id, destination.favourite);
+                  toggleShowA();
+                }}
               >
                 Add to favourites
               </Button>
             ) : (
               <Button
-                onClick={() =>
-                  onFavoriteDestination(destination.id, destination.favourite)
-                }
+                onClick={() => {
+                  onFavoriteDestination(destination.id, destination.favourite);
+                  toggleShowA();
+                }}
               >
                 Remove from favourites
               </Button>
-          
             )}
-             
           </ListGroupItemCustom>
         </ListGroup>
         <Card.Body></Card.Body>
       </CardCustom>
     </CardContainerStyleUserPage>
-
-
   ));
   return (
     <ContainerUserPage>
       <ContainerPageText>
         <PageTitle>Favourite Packages</PageTitle>
-        <PageDescription >
-          <BsBagHeartFill style={{fontSize:"100px"}} />
-          <PageDescriptionParagraph>Thank you for choosing our travel offers! Explore your favorite packages on this page. We're thrilled to make your journey unforgettable!</PageDescriptionParagraph>
-
-          </PageDescription>
+        <PageDescription>
+          <BsBagHeartFill style={{ fontSize: "100px" }} />
+          <PageDescriptionParagraph>
+            Thank you for choosing our travel offers! Explore your favorite
+            packages on this page. We're thrilled to make your journey
+            unforgettable!
+          </PageDescriptionParagraph>
+        </PageDescription>
       </ContainerPageText>
       <CardsPackagesContainer>
-        <CardsPackagesStyleUserPage>{favoriteDestinationCard}</CardsPackagesStyleUserPage>
-        <Toast style={{position:"fixed",top:"10px",right:"100px"}} show={showA} onClose={toggleShowA} autohide delay={3000}>
-               <Toast.Header>
-                 <img
-                   src="holder.js/20x20?text=%20"
-                   className="rounded me-2"
-                   alt=""
-                 />
-                 <strong className="me-auto">Tripfind</strong>
-                 <small></small>
-               </Toast.Header>
-               <Toast.Body>Hello! Your package has been removed from favourites.</Toast.Body>
-             </Toast>
+        <CardsPackagesStyleUserPage>
+          {favoriteDestinationCard}
+        </CardsPackagesStyleUserPage>
+        <Toast
+          style={{ position: "fixed", top: "10px", right: "100px" }}
+          show={showA}
+          onClose={toggleShowA}
+          autohide
+          delay={3000}
+        >
+          <Toast.Header>
+            <img
+              src="holder.js/20x20?text=%20"
+              className="rounded me-2"
+              alt=""
+            />
+            <strong className="me-auto">Tripfind</strong>
+            <small></small>
+          </Toast.Header>
+          <Toast.Body>
+            Hello! Your package has been removed from favourites.
+          </Toast.Body>
+        </Toast>
       </CardsPackagesContainer>
     </ContainerUserPage>
-
   );
 }
 

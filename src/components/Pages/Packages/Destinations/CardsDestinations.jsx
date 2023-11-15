@@ -46,7 +46,7 @@ const CardsDestinations = ({
     setDestinationFiltered(destinations);
   }, [destinations]);
 
-  const [showA, setShow] = useState(true)
+  const [showA, setShow] = useState(false)
   const toggleShowA = () => setShow(!showA)
 
   return (
@@ -105,11 +105,11 @@ const CardsDestinations = ({
                   </ListGroupItemCustom>
                   <ListGroupItemCustom>
                     <Button variant="outline-dark"  onMouseOver={changeBackground} onMouseOut={returnBackgroundToNormal} style={{fontWeight:900}}
-                      onClick={() =>[
+                      onClick={() =>{
                         handleFavouriteChange(
                           destination.id,
                           destination.favourite
-                        ), toggleShowA()]
+                        ); toggleShowA()}
                       }
                       
                     >
