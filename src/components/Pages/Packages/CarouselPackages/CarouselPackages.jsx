@@ -46,8 +46,8 @@ function CarouselPackages() {
       {sliderImages.map((item) => (
         <Carousel.Item key={item.label}>
          
-          <img src={item.src} alt={item.label} width={1440} height={600} />
-          <CarouselOverlay className="carusel"></CarouselOverlay>
+          <img src={item.src} alt={item.label} style={{width:"100%",height:"600px"}} />
+          <CarouselOverlay ></CarouselOverlay>
 
           <Carousel.Caption>
             <h1>{item.title}</h1>

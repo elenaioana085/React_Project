@@ -3,6 +3,7 @@ import { BsChevronRight } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
 import { BsFacebook } from "react-icons/bs";
 import { BsTiktok } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -37,20 +38,28 @@ function Footer() {
             <ul className="groupTitle">
               OUR AGENCY
               <li className="groupListItem">
+              <Link to="/packages">
                 <BsChevronRight className="listItecomIcon" />
                 Services
+                </Link>
               </li>
               <li className="groupListItem">
+              <Link to="/contact">
                 <BsChevronRight className="listItecomIcon" />
                 Insurance
+              </Link>
               </li>
               <li className="groupListItem">
+              <Link to="/packages">
                 <BsChevronRight className="listItecomIcon" />
                 Tourism
+              </Link>
               </li>
               <li className="groupListItem">
+              <Link to="/contact">
                 <BsChevronRight className="listItecomIcon" />
                 Payment
+                </Link>
               </li>
             </ul>
             <ul className="groupTitle">
@@ -65,7 +74,7 @@ function Footer() {
               </li>
               <li className="groupListItem">
                 <BsChevronRight className="listItecomIcon" />
-                Sky
+                SkyScanner
               </li>
               <li className="groupListItem">
                 <BsChevronRight className="listItecomIcon" />
@@ -75,20 +84,28 @@ function Footer() {
             <ul className="groupTitle">
               HELP
               <li className="groupListItem">
+              <Link to="/contact">
                 <BsChevronRight className="listItecomIcon" />
                 Contact
+                </Link>
               </li>
               <li className="groupListItem">
+              <Link to="/contact">
                 <BsChevronRight className="listItecomIcon" />
                 Insurance
+                </Link>
               </li>
               <li className="groupListItem">
+              <Link to="/contact">
                 <BsChevronRight className="listItecomIcon" />
                 Flight Cancellation/Delay
+                </Link>
               </li>
               <li className="groupListItem">
+              <Link to="/contact">
                 <BsChevronRight className="listItecomIcon" />
                 Accomodation Issues
+                </Link>
               </li>
             </ul>
           </div>

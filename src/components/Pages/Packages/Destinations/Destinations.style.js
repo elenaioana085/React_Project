@@ -91,6 +91,7 @@ export const CardsPackagesStyle = styled.div`
 
 export const CardContainerStyle = styled.div`
     margin-bottom: 1rem;
+    padding: 0.5rem;
     
 `;
 export const CardCustom = styled(Card)`

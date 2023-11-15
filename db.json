@@ -10,7 +10,7 @@
             "landmark": "Opera House",
             "transportation": "train",
             "length":"6",
-            "accomodation": "NH Wien Belvedere",
+            "accomodation": "NH Wien",
             "picture":"https://images.pexels.com/photos/16912374/pexels-photo-16912374/free-photo-of-fountain-in-gloriette-schonbrunn.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
             "favourite":false
 
@@ -22,10 +22,10 @@
             "chekindate": "05/08/2024",
             "chekoutdate": "08/08/2024",
             "price": "330",
-            "landmark": "Temple of Posoidon",
+            "landmark": "Poseidon's Temple",
             "transportation": "plane",
             "length":"4",
-            "accomodation": "Dionysos Hotel",
+            "accomodation": "Villa Dolphin",
             "picture":"https://images.pexels.com/photos/1285625/pexels-photo-1285625.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
             "favourite":false
         },
@@ -39,7 +39,7 @@
             "landmark": "Pyramids of Gyza",
             "transportation": "plane",
             "length":"3",
-            "accomodation": "Sonesta Hotel Tower",
+            "accomodation": "Sonesta Hotel",
             "picture":"https://images.pexels.com/photos/3873681/pexels-photo-3873681.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
             "favourite":false
         },
@@ -53,7 +53,7 @@
             "landmark": "Sagrada Familia",
             "transportation": "plane",
             "length":"4",
-            "accomodation": "Catalonia Sagrada Familia",
+            "accomodation": "NH Sonesta",
             "picture":"https://images.pexels.com/photos/11816123/pexels-photo-11816123.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
             "favourite":false
         },
@@ -67,7 +67,7 @@
             "landmark": "Big Ben",
             "transportation": "plane",
             "length":"5",
-            "accomodation": "The Z Hotel Holborn",
+            "accomodation": "The Z Hotel",
             "picture":"https://images.pexels.com/photos/726484/pexels-photo-726484.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
             "favourite":false
         },
@@ -81,7 +81,7 @@
             "landmark": "Macroplaza",
             "transportation": "plane",
             "length":"4",
-            "accomodation": "NH Monterrey La Fe",
+            "accomodation": "NH Monterrey",
             "picture":"https://images.pexels.com/photos/12315479/pexels-photo-12315479.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
             "favourite":false
         },
@@ -95,7 +95,7 @@
             "landmark": "Monserrate",
             "transportation": "plane",
             "length":"4",
-            "accomodation": "ibis Bogota Museo",
+            "accomodation": "ibis Bogota",
             "picture":"https://images.pexels.com/photos/13722651/pexels-photo-13722651.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
             "favourite":false
         },
@@ -109,7 +109,7 @@
             "landmark": "Eiffel Tower",
             "transportation": "train",
             "length":"5",
-            "accomodation": "B&B HOTEL Paris 17 Batignolles",
+            "accomodation": "B&B HOTEL",
             "picture":"https://images.pexels.com/photos/699466/pexels-photo-699466.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
             "favourite":false
             
@@ -124,7 +124,7 @@
             "landmark": "Burj Khalifa",
             "transportation": "plane",
             "length":"5",
-            "accomodation": "Citymax Hotel Bur Dubai",
+            "accomodation": "Millennium",
             "picture":"https://images.pexels.com/photos/6536035/pexels-photo-6536035.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
             "favourite":false
         },

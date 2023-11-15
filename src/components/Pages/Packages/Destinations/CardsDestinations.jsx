@@ -11,6 +11,16 @@ import {
 } from "./Destinations.style";
 import { useEffect } from "react";
 
+function changeBackground(e) {
+  e.target.style.background = 'blue';
+  e.target.style.color = 'white';
+}
+  function returnBackgroundToNormal(e){
+    e.target.style.background = null;
+    e.target.style.color = 'black';
+
+  }
+
 const CardsDestinations = ({
   filtered,
   setDestinationFiltered
@@ -94,7 +104,7 @@ const CardsDestinations = ({
                     Landmark: {destination?.landmark}
                   </ListGroupItemCustom>
                   <ListGroupItemCustom>
-                    <button
+                    <Button variant="outline-dark"  onMouseOver={changeBackground} onMouseOut={returnBackgroundToNormal} style={{fontWeight:900}}
                       onClick={() =>[
                         handleFavouriteChange(
                           destination.id,
@@ -106,8 +116,9 @@ const CardsDestinations = ({
                       {!destination.favourite
                         ? "Add to favourites"
                         : "Remove from favourites"}
+                        
                       
-                    </button>
+                    </Button>
                    
                   </ListGroupItemCustom>
                 </ListGroup>
@@ -123,8 +134,8 @@ const CardsDestinations = ({
                    className="rounded me-2"
                    alt=""
                  />
-                 <strong className="me-auto">Bootstrap</strong>
-                 <small>11 mins ago</small>
+                 <strong className="me-auto">Tripfind</strong>
+                 <small></small>
                </Toast.Header>
                <Toast.Body>Hello! Your chosen package has been added to favourites.</Toast.Body>
              </Toast>

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { FONT_TEXT_COLOR_BRIGHT } from '../../../../functionalities/color';
 
 export const ContainerFAQ = styled.div`
-    padding: 0 36px;
+    padding: 0 226px;
 `;
 export const ContainerFAQTransport = styled.div`
     margin-top: 2rem;

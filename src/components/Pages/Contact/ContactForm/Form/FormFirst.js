@@ -3,6 +3,7 @@ import React from "react";
 import Form from "react-bootstrap/Form";
 import DropdownForm from "../DropdownForm/DropdownFom";
 import {
+  ButtonCustom,
   FormControlCustom,
   FormCustom,
   FormLabelCustom,
@@ -27,9 +28,9 @@ function FormFirst() {
       </Form.Group>
       <Form.Group className="mb-3">
           <div className="d-grid gap-2">
-            <Button variant="primary" size="lg">
+            <ButtonCustom variant="primary" size="lg">
               Submit
-            </Button>
+            </ButtonCustom>
           </div>
       </Form.Group>
     </FormCustom>

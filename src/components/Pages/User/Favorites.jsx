@@ -1,6 +1,7 @@
 import { useState } from "react";
 import React from "react";
-import { Card, ListGroup, Toast } from "react-bootstrap";
+import { Button, Card, Container, ListGroup, Toast } from "react-bootstrap";
+import { BsBagHeartFill } from "react-icons/bs";
 import {
   CardContainerStyle,
   CardCustom,
@@ -8,12 +9,25 @@ import {
   CardTitleCustom,
   ListGroupItemCustom,
 } from "../Packages/Destinations/Destinations.style";
+import { CardContainerStyleUserPage, CardsPackagesContainer, CardsPackagesStyleUserPage, ContainerPageText, ContainerUserPage, PageDescription, PageDescriptionParagraph, PageTitle } from "./User.style";
 
 function Favorites({ destinations, onFavoriteDestination }) {
+
+  function changeBackground(e) {
+    e.target.style.background = 'blue';
+    e.target.style.color = 'white';
+  }
+    function returnBackgroundToNormal(e){
+      e.target.style.background = null;
+      e.target.style.color = 'black';
+  
+    };
+
+
   const [showA, setShow] = useState(true)
   const toggleShowA = () => setShow(!showA)
   const favoriteDestinationCard = destinations.map((destination, index) => (
-    <CardContainerStyle key={`destination-${index}`}>
+    <CardContainerStyleUserPage key={`destination-${index}`}>
       <CardCustom>
         <Card.Img
           variant="top"
@@ -48,7 +62,7 @@ function Favorites({ destinations, onFavoriteDestination }) {
           </ListGroupItemCustom>
           <ListGroupItemCustom>
             {!destination.favourite ? (
-              <button
+              <Button variant="outline-dark"  onMouseOver={changeBackground} onMouseOut={returnBackgroundToNormal} style={{fontWeight:900}}
                 onClick={() =>[
                   onFavoriteDestination(destination.id, destination.favourite),
                   toggleShowA()]
@@ -56,15 +70,15 @@ function Favorites({ destinations, onFavoriteDestination }) {
                
               >
                 Add to favourites
-              </button>
+              </Button>
             ) : (
-              <button
+              <Button
                 onClick={() =>
                   onFavoriteDestination(destination.id, destination.favourite)
                 }
               >
                 Remove from favourites
-              </button>
+              </Button>
           
             )}
              
@@ -72,17 +86,22 @@ function Favorites({ destinations, onFavoriteDestination }) {
         </ListGroup>
         <Card.Body></Card.Body>
       </CardCustom>
-    </CardContainerStyle>
+    </CardContainerStyleUserPage>
 
 
   ));
   return (
-    <div>
-      <div>
-        <h2 className="favorite-destinations-header">Favorite Packages</h2>
-      </div>
-      <div>
-        <CardsPackagesStyle>{favoriteDestinationCard}</CardsPackagesStyle>
+    <ContainerUserPage>
+      <ContainerPageText>
+        <PageTitle>Favourite Packages</PageTitle>
+        <PageDescription >
+          <BsBagHeartFill style={{fontSize:"100px"}} />
+          <PageDescriptionParagraph>Thank you for choosing our travel offers! Explore your favorite packages on this page. We're thrilled to make your journey unforgettable!</PageDescriptionParagraph>
+
+          </PageDescription>
+      </ContainerPageText>
+      <CardsPackagesContainer>
+        <CardsPackagesStyleUserPage>{favoriteDestinationCard}</CardsPackagesStyleUserPage>
         <Toast style={{position:"fixed",top:"10px",right:"100px"}} show={showA} onClose={toggleShowA} autohide delay={3000}>
                <Toast.Header>
                  <img
@@ -90,13 +109,13 @@ function Favorites({ destinations, onFavoriteDestination }) {
                    className="rounded me-2"
                    alt=""
                  />
-                 <strong className="me-auto">Bootstrap</strong>
-                 <small>11 mins ago</small>
+                 <strong className="me-auto">Tripfind</strong>
+                 <small></small>
                </Toast.Header>
                <Toast.Body>Hello! Your package has been removed from favourites.</Toast.Body>
              </Toast>
-      </div>
-    </div>
+      </CardsPackagesContainer>
+    </ContainerUserPage>
 
   );
 }

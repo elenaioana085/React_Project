@@ -10,14 +10,20 @@ export const ContainerReviews = styled.div`
     
 `;
 
-export const ContainerCardReview = styled.div`
 
+export const ContainerCardReview = styled.div`
+    padding: 1%;
 `;
 
 export const ContainerReviewsJustCards = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+
+    @media (max-width:986px){
+        flex-direction: column;
+        align-Items: center;
+    }
 `;
 
 export const ContainerReviewsTitle = styled.div`

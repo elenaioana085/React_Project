@@ -3,7 +3,7 @@ import React from "react";
 
 import Destinations from "./Destinations/Destinations";
 import Reviews from "./Reviews/Reviews";
-import CardReviews from "./Reviews/cardsReviews/cardsReviewsONE";
+
 import FilterCards from "./FilterCards/FilterCards";
 
 function Packages({ searchDetails }) {
@@ -21,7 +21,7 @@ function Packages({ searchDetails }) {
           filtered={filtered}
         ></Destinations>
         <Reviews>
-          <CardReviews></CardReviews>
+          
         </Reviews>
       </div>
     </section>
